@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 
@@ -10,8 +9,8 @@ interface ProjectCardProps {
   project: {
     title: string;
     description: string;
-    repo: string;
-    demo: string;
+    repo?: string;
+    demo?: string;
     images: string[];
     technologies: string[];
   };
@@ -38,34 +37,46 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             ))}
           </ul>
         </div>
-        <div className="pb-1">
-          <h4 className="mb-1 mt-2">Demo</h4>
-          <div className="flex space-y-2 justify-between flex-col">
-            {project.images.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                width={450}
-                height={450}
-                alt="Demo"
-                className="rounded-md object-cover"
-              />
-            ))}
-          </div>
-        </div>
+        {
+          project.images.length > 0 && (
+            <div className="pb-1">
+              <h4 className="mb-1 mt-2">Demo</h4>
+              <div className="flex space-y-2 justify-between flex-col">
+                {project.images.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    width={450}
+                    height={450}
+                    alt="Demo"
+                    className="rounded-md object-cover"
+                  />
+                ))}
+              </div>
+            </div>
+          )
+        }
       </CollapsibleContent>
       <div className="flex justify-between items-center pt-2">
         <div className="space-x-2">
-          <Button size="icon" variant="secondary" asChild>
-            <Link href={project.demo} target="_blank">
-              <ExternalLink size={24} />
-            </Link>
-          </Button>
-          <Button size="icon" variant="secondary" asChild>
-            <Link href={project.repo} target="_blank">
-              <Github size={24} />
-            </Link>
-          </Button>
+          {
+            project.demo && (
+              <Button size="icon" variant="secondary" asChild>
+                <a href={project.demo} target="_blank">
+                  <ExternalLink size={24} />
+                </a>
+              </Button>
+            )
+          }
+          {
+            project.repo && (
+              <Button size="icon" variant="secondary" asChild>
+                <a href={project.repo} target="_blank">
+                  <Github size={24} />
+                </a>
+              </Button>
+            )
+          }
         </div>
         <ViewMore />
       </div>

@@ -21,16 +21,16 @@ const About = () => {
         Este es mi portfolio, donde muestro algunos de mis proyectos y comparto un poco de mi experiencia.
         Soy una persona muy compremetida con el ambiente tech, me gusta estar siempre actualizado y aprender nuevas tecnologías.
       </p>
-      {/* <h2 className="text-xl mt-10 mb-2">Si querés saber mas sobre mí podes ver mi CV</h2>
+      <h2 className="text-xl mt-10 mb-2">Si querés saber mas sobre mí podes ver mi CV</h2>
       <Button
         variant='secondary'
         asChild
       >
-        <a href="" download>
+        <a href="/federico-luna-cv.pdf" download>
           <Download className="mr-2" size={24} />
           Descargar CV
         </a>
-      </Button> */}
+      </Button>
     </section>
   )
 }
