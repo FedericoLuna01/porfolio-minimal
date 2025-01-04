@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <CollapsibleContent>
         <div>
           <h4 className="mb-1 mt-2">Tecnologías</h4>
-          <ul className="flex flex-wrap space-x-2">
+          <ul className="flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
               <li
                 key={index}

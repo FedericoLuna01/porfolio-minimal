@@ -1,4 +1,4 @@
-import { FigmaIcon, NextIcon, PostgresIcon, PrismaIcon, ShadCnIcon, TailwindIcon, TypescriptIcon } from "@/components/icons";
+import { DockerIcon, FigmaIcon, NextIcon, PostgresIcon, PrismaIcon, ShadCnIcon, TailwindIcon, TypescriptIcon } from "@/components/icons";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
 
@@ -15,9 +15,9 @@ export const ProjectsItems = [
     id: 4,
     title: "Carta",
     description:
-      "Carta es un proyecto con un compañero, se trata de un menú digital donde los restaurants o bares van a poder mostrar su productos y los clientes van a poder verlos y hacer pedidos. La aplicación cuenta con un panel de administración donde los dueños de los locales van a poder gestionar sus productos, categorías, y pedidos en tiempo real gracias a Socket IO.",
-    repo: "https://github.com/FedericoLuna01/carta",
-    demo: "https://demo-carta.vercel.app/",
+      "Carta es un proyecto con un compañero, se trata de un menú digital donde los restaurants o bares van a poder mostrar su productos y los clientes van a poder verlos y hacer pedidos. La aplicación cuenta con un panel de administración donde los dueños de los locales van a poder gestionar sus productos, categorías, y pedidos en tiempo real gracias a Socket IO. Actualmente la aplicación se encuentra en desarrollo pero pronto estará disponible para su uso.",
+    repo: "https://github.com/FedericoLuna01/carta-multi-tenant",
+    // demo: "https://demo-carta.vercel.app/",
     images: ["/carta-1.webp", "/carta-2.webp", "/carta-3.webp", "/carta-4.webp", "/carta-5.webp"],
     technologies: [
       "Nextjs",
@@ -25,7 +25,9 @@ export const ProjectsItems = [
       "TailwindCSS",
       "Prisma",
       "PostgreSQL",
-      "Socket IO"
+      "Socket IO",
+      "Monorepo",
+      "Docker"
     ],
   },
   {
@@ -120,6 +122,11 @@ export const StackItems = [
     id: 5,
     name: "PostgreSQL",
     icon: PostgresIcon,
-  }
+  },
+  {
+    id: 6,
+    name: "Docker",
+    icon: DockerIcon,
+  },
 ];
 
